@@ -1,0 +1,29 @@
+@import "imp.css";
+
+a{
+    text-decoration: none;
+}
+
+div{
+    width: 700px;
+}
+p{
+    color: red;
+    width: 500px;
+    height: 500px;
+    /*background-color: #9000ff;*/
+    /*background-image: url(logo.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    background: #9000ff url(../logo.png) center no-repeat;
+    margin: 100px;
+}
+
+
+.box1, .box2{
+    background: greenyellow;
+}
+
+li{
+    list-style: square;
+}
