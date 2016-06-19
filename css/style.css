@@ -26,4 +26,30 @@ p{
 
 li{
     list-style: square;
+    color: deeppink;
 }
+
+ .menu{
+     background-color: greenyellow;
+ }
+
+ .menu li {
+     color: #00b3ee;
+ }
+
+ .active{
+     text-decoration: line-through;
+     font-weight: bold;
+     font-size: 30px;
+ }
+
+[type="text"]{
+    color: red;
+}
+[for="age"]{
+    background: green;
+}
+
+/*div p{*/
+    /*background-color: #d3c6ff;*/
+/*}*/
