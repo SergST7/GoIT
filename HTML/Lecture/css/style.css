@@ -15,7 +15,7 @@ p{
     /*background-image: url(logo.png);*/
     /*background-repeat: no-repeat;*/
     /*background-position: center;*/
-    background: #9000ff url(../logo.png) center no-repeat;
+    background: #9000ff url(../img/logo.png) center no-repeat;
     margin: 100px;
 }
 
