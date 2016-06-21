@@ -14,5 +14,10 @@ h1{
 }
 .section{
     border-bottom: 2px solid grey;
-    padding-left:20px;
+}
+.last-section, .section{
+    padding:30px 20px;
+}
+.phone{
+    margin-bottom: 30px;
 }
