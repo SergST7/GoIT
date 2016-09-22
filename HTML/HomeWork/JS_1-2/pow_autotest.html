@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pow Function + Auto Test</title>
+  <script src="https://js.cx/test/libs.js"></script>
+  <script>
+    describe("pow", function() {
+
+      describe("возводит x в степень n", function() {
+
+        function makeTest(x) {
+          var expected = x * x * x;
+          it("при возведении " + x + " в степень 3 результат: " + expected, function() {
+            assert.equal(pow(x, 3), expected);
+          });
+        }
+
+        for (var x = 1; x <= 5; x++) {
+          makeTest(x);
+        }
+
+      });
+
+      it("при возведении в отрицательную степень результат NaN", function() {
+        assert(isNaN(pow(2, -1)), "pow(2, -1) не NaN");
+      });
+
+      it("при возведении в дробную степень результат NaN", function() {
+        assert(isNaN(pow(2, 1.5)), "pow(2, -1.5) не NaN");
+      });
+
+      it("при возведении 0 в 0 степень результат NaN", function() {
+        assert(isNaN(pow(0, 0)), "pow(0, 0) не NaN");
+      });
+
+      describe("при возведении любого числа в 0 степень результат 1", function() {
+
+        function makeTest(x){
+          it("при возведении" +x+ " в  степень 0 результат 1", function() {
+            assert.equal(pow(x, 0), 1);
+          });
+        }
+
+        for (var x = -3; x <= 3; x++) {
+          if (x != 0) makeTest(x);
+        }
+
+      });
+    });
+  </script>
+</head>
+<body>
+
+<script>
+
+  function pow(x, n) {
+
+    if (n == 0) {
+
+      if (x == 0) {
+        return NaN;
+      }
+
+      return 1;
+
+    }
+
+    if (n < 0) return NaN;
+
+    if (Math.round(n) != n) return NaN;
+
+    var result = 1;
+    for (var i = 0; i < n; i++) {
+      result *= x;
+    }
+    return result;
+  }
+  res=pow(5,0);
+  console.log(res);
+
+
+</script>
+
+</body>
+</html>
